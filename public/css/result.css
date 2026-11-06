@@ -1,0 +1,15 @@
+.result-page { display: grid; place-items: start center; padding: 32px 20px; min-height: 100vh; }
+.result-card { width: min(640px, 100%); text-align: center; }
+.score { font-family: Georgia, serif; font-size: 5rem; font-weight: 700; line-height: 1; margin: 12px 0 4px; }
+.score-total { font-size: 2rem; color: var(--ink-soft); }
+.percent { font-size: 1.2rem; margin: 0; }
+.status { display: inline-block; margin: 14px 0 28px; padding: 6px 18px; border-radius: 999px; font-weight: 700; }
+.status.pass { background: var(--green-soft); color: var(--green); }
+.status.fail { background: var(--red-soft); color: var(--red); }
+.result-card h3 { text-align: left; margin-bottom: 10px; }
+.review { text-align: left; padding: 0; list-style: none; margin: 0 0 28px; display: grid; gap: 8px; }
+.review li { padding: 10px 14px; border-radius: 8px; border-left: 5px solid; }
+.review li.right { background: var(--green-soft); border-color: var(--green); }
+.review li.wrong { background: var(--red-soft); border-color: var(--red); }
+.review .q { font-weight: 600; }
+.review .a { font-size: .9rem; color: var(--ink-soft); }

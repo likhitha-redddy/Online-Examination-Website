@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam - Online Examination</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/exam.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong id="studentName"></strong>
+      <span class="muted" id="progressText"></span>
+    </div>
+    <div id="timer" class="timer" role="timer" aria-live="off">00:00</div>
+  </header>
+
+  <div class="exam-layout">
+    <section class="card question-card">
+      <p class="q-count" id="qCount"></p>
+      <h2 id="qText"></h2>
+      <div id="options" class="options" role="radiogroup"></div>
+
+      <div class="nav-row">
+        <button id="prevBtn" class="btn">Previous</button>
+        <button id="clearBtn" class="btn ghost">Clear answer</button>
+        <button id="nextBtn" class="btn">Next</button>
+      </div>
+    </section>
+
+    <aside class="card palette-card">
+      <h3>Questions</h3>
+      <div id="palette" class="palette"></div>
+      <p class="legend"><span class="dot answered"></span> Answered <span class="dot"></span> Not answered</p>
+      <button id="submitBtn" class="btn primary wide">Submit exam</button>
+    </aside>
+  </div>
+
+  <dialog id="confirmDialog">
+    <h3>Submit your exam?</h3>
+    <p id="confirmText"></p>
+    <div class="dialog-actions">
+      <button id="cancelSubmit" class="btn">Keep working</button>
+      <button id="confirmSubmit" class="btn primary">Submit now</button>
+    </div>
+  </dialog>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/exam.js"></script>
+</body>
+</html>

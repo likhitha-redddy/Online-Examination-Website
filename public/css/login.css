@@ -1,0 +1,5 @@
+.login-card { width: min(420px, 100%); }
+.login-card p { margin: 6px 0 22px; }
+.login-card .btn { width: 100%; margin-top: 8px; }
+.login-card .error { margin: 10px 0 0; }
+.login-card .hint { font-size: .85rem; color: var(--ink-soft); margin: 18px 0 0; }

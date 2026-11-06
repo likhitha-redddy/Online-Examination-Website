@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Login - Online Examination</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <main class="page-center">
+    <section class="card login-card">
+      <h1>Web Technologies Exam</h1>
+      <p class="muted">10 multiple-choice questions &middot; 5 minutes &middot; one attempt</p>
+
+      <form id="loginForm" autocomplete="off">
+        <label for="username">Student ID</label>
+        <input id="username" name="username" type="text" required autofocus>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+
+        <p id="loginError" class="error" role="alert"></p>
+        <button type="submit" class="btn primary">Log in and start</button>
+      </form>
+
+      <p class="hint">Demo accounts: <code>student1 / pass123</code>, <code>alice / alice@123</code></p>
+    </section>
+  </main>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

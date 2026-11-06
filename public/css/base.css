@@ -1,0 +1,66 @@
+/* Shared styles: colours, typography, cards, buttons, form fields.
+   Every page links this file first. */
+:root {
+  --paper: #e8ecf5;
+  --sheet: #fbfcff;
+  --ink: #14213d;
+  --ink-soft: #5a6580;
+  --line: #c9d0e2;
+  --blue: #2a45d4;
+  --blue-soft: #dfe5ff;
+  --red: #c4311f;
+  --green: #1d7a4c;
+  --green-soft: #dcf2e5;
+  --red-soft: #fbe3df;
+  --radius: 10px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 0; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.45rem; line-height: 1.35; font-weight: 600; }
+h3 { font-size: 1.1rem; }
+.hidden { display: none !important; }
+.muted { color: var(--ink-soft); }
+code { background: var(--blue-soft); padding: 1px 6px; border-radius: 4px; }
+a { color: var(--blue); }
+
+.card { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+
+.btn {
+  font: inherit; font-weight: 600;
+  padding: 10px 18px; border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  background: var(--sheet); color: var(--ink);
+  cursor: pointer;
+}
+.btn:hover { background: var(--blue-soft); }
+.btn:disabled { opacity: .4; cursor: not-allowed; background: var(--sheet); }
+.btn.primary { background: var(--ink); color: #fff; }
+.btn.primary:hover { background: var(--blue); border-color: var(--blue); }
+.btn.ghost { border-color: transparent; color: var(--ink-soft); }
+.btn.wide { width: 100%; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+label { display: block; font-weight: 600; margin: 14px 0 6px; }
+input[type="text"], input[type="password"] {
+  width: 100%; font: inherit;
+  padding: 11px 12px;
+  border: 1.5px solid var(--line); border-radius: 8px; background: #fff;
+}
+input:focus { border-color: var(--blue); outline: none; box-shadow: 0 0 0 3px var(--blue-soft); }
+.error { color: var(--red); min-height: 1.4em; font-weight: 600; }
+
+/* Simple centred page, used by login and result pages */
+.page-center { min-height: 100vh; display: grid; place-items: center; padding: 20px; }
+
+dialog { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; max-width: 380px; }
+dialog::backdrop { background: rgba(20, 33, 61, .5); }
+dialog p { color: var(--ink-soft); }
+.dialog-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 18px; }
